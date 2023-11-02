@@ -9,21 +9,24 @@ import { VscStarHalf } from 'react-icons/vsc';
 import { AiOutlineProject } from 'react-icons/ai';
 import { MdAccountBalance } from 'react-icons/md';
 import { SiAuth0 } from 'react-icons/si';
-import { IoIosArrowUp } from 'react-icons/io';
+import { BsGraphUpArrow } from 'react-icons/bs';
 import { IoIosArrowDown } from 'react-icons/io';
 import { Link, Route, Routes } from 'react-router-dom';
-import {Projects} from './pages/Projects'
 import { Dashboard } from './projects/dashboard';
 import {Customer} from './projects/customer';
 import {CustomerDetails} from './projects/customerDetails'
 import {Mail} from './projects/mail';
-import {Invoice} from './account/invoice'
+import {Invoice} from './account/invoice';
 import {Settings} from './account/settings';
 import {Kycform } from './account/kycform';
 import {Signin} from './authentication/signin'
 import {Signup} from './authentication/signup'
 import {Forgotpassword} from './authentication/forgotpassword'
-import {Resetpassword} from './authentication/resetpassword'
+import {Resetpassword} from './authentication/resetpassword';
+import {Productlist} from './sales/productlist';
+import {Productedit} from './sales/productedit';
+import {Newproduct} from './sales/newproduct';
+
  
 
 
@@ -36,7 +39,7 @@ export default function Sidebar({item}) {
     const menus = [
         {
             title:'Projects',
-            path:'/projects',
+            // path:'/projects',
             icon:<AiOutlineProject/>,
             submenu:true,
             submenuItems:[
@@ -86,6 +89,27 @@ export default function Sidebar({item}) {
             ]
 
         },
+        {
+            title:'Sales',
+            icon:<BsGraphUpArrow/>,
+            submenu:true,
+            submenuItems:[
+                {
+                    title:'Product List',
+                    path:'sales/productlist'
+                },
+                {
+                    title:'Product Edit',
+                    path:'sales/productedit'
+                },
+                {
+                    title:'New Product',
+                    path:'sales/newproduct'
+                }
+            ]
+
+        },
+
         {
             title:'Authentication',
             icon:<SiAuth0/>,
@@ -186,6 +210,9 @@ export default function Sidebar({item}) {
                     <Route path='authentication/signup' element={<Signup/>}/>
                     <Route path='authentication/forgotpassword'  element={<Forgotpassword/>}/>
                     <Route path='authentication/resetpassword' element={<Resetpassword/>}/>
+                    <Route path='/sales/productedit' element={<Productedit/>}/>
+                    <Route path='/sales/productlist' element={<Productlist/>}/>
+                    <Route path='/sales/newproduct' element={<Newproduct/>}/>
                 </Routes>
                 <>
                     <footer>
