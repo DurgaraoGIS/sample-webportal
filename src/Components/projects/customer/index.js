@@ -14,7 +14,7 @@ export const Customer = () => {
           <div class="flex items-center">
             <FaUsers size={40} className="icon1" />
             <div class="ml-4">
-              <p class="text-sm">Total Customers</p>
+              <p class="text-sm">Total Customers Details</p>
               <h5 class="text-lg font-bold">1234</h5>
             </div>
             <div
