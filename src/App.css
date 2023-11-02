@@ -33,3 +33,95 @@
     transform: rotate(360deg);
   }
 }
+.customer {
+  margin-left: 15px;
+  margin-bottom: -5px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+}
+
+.rowdata {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon {
+  margin-right: 4px;
+}
+
+.card {
+  border: 0.5px solid grey;
+}
+
+.icon1 {
+  background-color: #4f46e5;
+  padding: 10px;
+  height: 80px;
+  border-radius: 10px;
+  width: 80px;
+  color: #fff;
+}
+
+.icon2 {
+  background-color: #3b82f6;
+  padding: 10px;
+  height: 80px;
+  border-radius: 10px;
+  width: 80px;
+  color: #fff;
+}
+
+.icon3 {
+  background-color: #10b981;
+  padding: 10px;
+  height: 80px;
+  border-radius: 10px;
+  width: 80px;
+  color: #fff;
+}
+
+.cardData {
+  display: flex;
+  flex-direction: row;
+  margin: 4;
+}
+
+.dashboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200vh;
+  background-color: #f2f3f4;
+  height: "100%";
+}
+
+.percentege1 {
+  background-color: #d1fae5;
+  color: #3a9e75;
+  padding: 3px;
+  justify-content: end;
+  width: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+  height: 30px;
+  border-radius: 10px
+}
+
+.percentege2 {
+  background-color: #fee2e2;
+  color: #e35042;
+  padding: 3px;
+  justify-content: end;
+  width: 100px;
+  text-align: center;
+  height: 30px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
