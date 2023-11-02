@@ -40,7 +40,7 @@ export const Mail = () => {
                 <div className='text-slate-600'>
                     <ul className='my-10'>
                         <li className='flex  my-2'>
-                            <TbInbox className='text-3xl -ml-2' />
+                            <TbInbox className=' -ml-2' />
 
                             <p className='mx-5 text-lg  mt-0'>Inbox</p>
 
