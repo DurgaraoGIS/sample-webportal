@@ -37,44 +37,45 @@ export const Mail = () => {
         <div className='grid grid-cols-12 h-screen'>
             <div className={`${menu ? "block" : "hidden"} col-span-2  font-bold mx-10 `} >
                 <h1 className='text-3xl my-10'>Mailbox</h1>
-                <div>
+                <div className='text-slate-600'>
                     <ul className='my-10'>
-                        <li className='flex  static my-4'>
-                            <TbInbox className='text-4xl -ml-2' />
+                        <li className='flex  my-2'>
+                            <TbInbox className='text-3xl -ml-2' />
 
-                            <p className='mx-5 text-xl mt-1'>Inbox</p>
+                            <p className='mx-5 text-lg  mt-0'>Inbox</p>
+
+                        </li>
+                        <li className='flex   my-4'>
+                            <AiOutlineSend className='text-3xl -ml-2' />
+
+                            <p className='mx-5 text-lg   -mt-0'>Sent Item</p>
 
                         </li>
                         <li className='flex  static my-4'>
-                            <AiOutlineSend className='text-4xl -ml-2' />
+                            <FiEdit2 className='text-3xl -ml-2' />
 
-                            <p className='mx-5 text-xl mt-1'>Sent Item</p>
-
-                        </li>
-                        <li className='flex  static my-4'>
-                            <FiEdit2 className='text-4xl -ml-2' />
-
-                            <p className='mx-5 text-xl mt-1'>Draft</p>
+                            <p className='mx-5 text-lg   -mt-0'>Draft</p>
 
                         </li>
                         <li className='flex  static my-4'>
-                            <AiOutlineStar className='text-4xl -ml-2' />
+                            <AiOutlineStar className='text-3xl -ml-2' />
 
-                            <p className='mx-5 text-xl mt-1'>Starred</p>
-
-                        </li>
-                        <li className='flex  static my-4'>
-                            <RiDeleteBin6Line className='text-4xl -ml-2' />
-
-                            <p className='mx-5 text-xl mt-1'>Deleted</p>
+                            <p className='mx-5 text-lg   -mt-0'>Starred</p>
 
                         </li>
+                        <li className='flex    my-4'>
+                            <RiDeleteBin6Line className='text-3xl -ml-2' />
+
+                            <p className='mx-5 text-lg  -mt-0'>Deleted</p>
+
+                        </li>
+                        
                     </ul>
-                    <h1 className='text-xl mt-3 text-slate-5    00'>LABELS</h1>
-                    <ul className='my-5 list-disc ml-5 text-2xl'>
-                        <li className='text-blue-300 my-2'><span className='text-slate-800 mx-5'>Work</span></li>
-                        <li className='text-purple-300 my-2'><span className='text-slate-800 mx-5'>Private</span></li>
-                        <li className='text-red-300 my-2'><span className='text-slate-800 mx-5'>Important</span></li>
+                    <h1 className='text-xl mt-3 text-slate-600'>LABELS</h1>
+                    <ul className='my-5 list-disc ml-5 text-xl text-slate-500'>
+                        <li className='text-blue-300 my-2'><span className='text-slate-500 mx-5'>Work</span></li>
+                        <li className='text-purple-300 my-2'><span className='text-slate-500 mx-5'>Private</span></li>
+                        <li className='text-red-300 my-2'><span className='text-slate-500 mx-5'>Important</span></li>
                     </ul>
                 </div>
             </div>
