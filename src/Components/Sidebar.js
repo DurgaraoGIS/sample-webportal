@@ -19,7 +19,11 @@ import {CustomerDetails} from './projects/customerDetails'
 import {Mail} from './projects/mail';
 import {Invoice} from './account/invoice'
 import {Settings} from './account/settings';
-import {Kycform } from './account/kycform'
+import {Kycform } from './account/kycform';
+import {Signin} from './authentication/signin'
+import {Signup} from './authentication/signup'
+import {Forgotpassword} from './authentication/forgotpassword'
+import {Resetpassword} from './authentication/resetpassword'
  
 
 
@@ -178,10 +182,10 @@ export default function Sidebar({item}) {
                     <Route path='/account/settings' exact element={<Settings/>}/>
                     <Route path='/account/invoice' exact element={<Invoice/>}/>
                     <Route path='/account/kyc' exact element={<Kycform/>}/>
-                    <Route path=''/>
-                    <Route path=''/>
-                    <Route path=''/>
-                    <Route path=''/>
+                    <Route path='/authentication/signin' element={<Signin/>}/>
+                    <Route path='authentication/signup' element={<Signup/>}/>
+                    <Route path='authentication/forgotpassword'  element={<Forgotpassword/>}/>
+                    <Route path='authentication/resetpassword' element={<Resetpassword/>}/>
                 </Routes>
              </div>
         </div>
