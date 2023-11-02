@@ -17,9 +17,10 @@ import { Dashboard } from './projects/dashboard';
 import {Customer} from './projects/customer';
 import {CustomerDetails} from './projects/customerDetails'
 import {Mail} from './projects/mail';
-import { Account } from './pages/Account';
+import {Invoice} from './account/invoice'
 import {Settings} from './account/settings';
-
+import {Kycform } from './account/kycform'
+ 
 
 
 export default function Sidebar({item}) {
@@ -38,7 +39,7 @@ export default function Sidebar({item}) {
 
                 {
                     title:'Dashboard',
-                    path:'/projects/dashboard',
+                    path:'/',
 
                 },
                 {
@@ -66,7 +67,7 @@ export default function Sidebar({item}) {
             submenuItems:[
                 {
                     title:'Settings',
-                    path:'/settings'
+                    path:'account/settings'
 
                 },
                 {
@@ -88,19 +89,19 @@ export default function Sidebar({item}) {
             submenuItems:[
                 {
                     title:'Signin',
-                    path:''
+                    path:'authentication/signin'
                 },
                 {
                     title:'Signup',
-                    path:''
+                    path:'authentication/signup'
                 },
                 {
                     title:'Forgot Password',
-                    path:''
+                    path:'authentication/forgotpassword'
                 },
                 {
                     title:'Reset Password',
-                    path:''
+                    path:'authentication/resetpassword'
                 },
             ]
         }
@@ -169,14 +170,18 @@ export default function Sidebar({item}) {
             </div>
             <div className=' p-5'>
             <Routes>
-            <Route path="/" exact element={<Projects />} />
-                <Route path="/projects/dashboard" exact element={<Dashboard />} />
+            {/* <Route path="/" exact element={<Projects />} /> */}
+                <Route path="/" exact element={<Dashboard />} />
                     <Route path='/projects/customer' exact  element={<Customer/>}/>
                     <Route path='/projects/customerdetails' exact  element={<CustomerDetails/>}/>
                     <Route path='/projects/mail' exact  element={<Mail/>}/>
                     <Route path='/account/settings' exact element={<Settings/>}/>
-                    <Route/>
-                    <Route/>
+                    <Route path='/account/invoice' exact element={<Invoice/>}/>
+                    <Route path='/account/kyc' exact element={<Kycform/>}/>
+                    <Route path=''/>
+                    <Route path=''/>
+                    <Route path=''/>
+                    <Route path=''/>
                 </Routes>
              </div>
         </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const KYC = () => {
+export const Kycform = () => {
   return (
     <div>KYC</div>
   )
