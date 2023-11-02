@@ -112,9 +112,9 @@ export default function Sidebar({item}) {
     ]
 
   return (
-    <div className='flex'>
+    <div className='flex h-screen'>
         <div className={`bg-gray-100 text-2xl h-screen border p-2 pt-4  ${open ?'w-65': "w-14"}  `}>
-            <div className='inline-flex'>
+            <div className='inline-flex '>
                 <VscStarHalf className='  text-4xl'/>
                 <p className={`ml-3 mt-1 ${!open && "scale-0"}`}>elstar</p>
             </div>
@@ -151,8 +151,8 @@ export default function Sidebar({item}) {
             </ul>
            </div>
         </div>
-        <div className='   w-full'>
-            <div className='border  -mt-6  '>
+        <div className='   w-full '>
+            <div className='border bg-gray-100 w-full fixed  -mt-6  '>
             <div className='flex  pt-4 m-6'>
             <button onClick={setData}>
             {  
@@ -163,16 +163,16 @@ export default function Sidebar({item}) {
                     <div>
                         <GoSearch className='text-2xl ml-4 mt-3'/>
                     </div>
-                    <div className='flex space-x-5 mt-2'>
+                    <div className='flex space-x-5 mt-2 mr-16'>
                         <BiBell className='text-2xl'/>
                         <FiSettings  className='text-2xl'/>
                         <FaUserCircle  className='text-2xl'/>
-                        <p className='hidden md:block'>Admin Carolin Perkins</p>
+                        <p className={`hidden md:block ${open && "scale-0"}`}>Admin Carolin Perkins</p>
                     </div>
                 </div><hr/>
             </div>
             </div>
-            <div className=' p-5'>
+            <div className=' pt-20 '>
             <Routes>
             {/* <Route path="/" exact element={<Projects />} /> */}
                 <Route path="/" exact element={<Dashboard />} />
@@ -187,6 +187,11 @@ export default function Sidebar({item}) {
                     <Route path='authentication/forgotpassword'  element={<Forgotpassword/>}/>
                     <Route path='authentication/resetpassword' element={<Resetpassword/>}/>
                 </Routes>
+                <>
+                    <footer>
+                        <p className='p-4'>Copyright @ 2023 <b>Elstar</b> All rights reserved</p>
+                    </footer>
+                </>
              </div>
         </div>
     </div>
