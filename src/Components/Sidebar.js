@@ -17,6 +17,8 @@ import { Dashboard } from './projects/dashboard';
 import {Customer} from './projects/customer';
 import {CustomerDetails} from './projects/customerDetails'
 import {Mail} from './projects/mail';
+import { Account } from './pages/Account';
+import {Settings} from './account/settings';
 
 
 
@@ -33,6 +35,7 @@ export default function Sidebar({item}) {
             icon:<AiOutlineProject/>,
             submenu:true,
             submenuItems:[
+
                 {
                     title:'Dashboard',
                     path:'/projects/dashboard',
@@ -57,21 +60,22 @@ export default function Sidebar({item}) {
         },
         {
             title:'Account',
+            // path:'/account',
             submenu:true,
             icon:<MdAccountBalance/>,
             submenuItems:[
                 {
                     title:'Settings',
-                    path:''
+                    path:'/settings'
 
                 },
                 {
                     title:'Invoice',
-                    path:''
+                    path:'account/invoice'
                 },
                 {
                     title:'KYC Form',
-                    path:''
+                    path:'account/kyc'
                 },
                 
             ]
@@ -170,6 +174,9 @@ export default function Sidebar({item}) {
                     <Route path='/projects/customer' exact  element={<Customer/>}/>
                     <Route path='/projects/customerdetails' exact  element={<CustomerDetails/>}/>
                     <Route path='/projects/mail' exact  element={<Mail/>}/>
+                    <Route path='/account/settings' exact element={<Settings/>}/>
+                    <Route/>
+                    <Route/>
                 </Routes>
              </div>
         </div>
