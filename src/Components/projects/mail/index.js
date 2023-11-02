@@ -42,7 +42,7 @@ export const Mail = () => {
                         <li className='flex  my-2'>
                             <TbInbox className=' -ml-2' />
 
-                            <p className='mx-5 text-xl  mt-0'>Inbox</p>
+                            <p className='mx-5 text-lg  mt-0'>Inbox</p>
 
                         </li>
                         <li className='flex   my-4'>
